@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="690.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.web138_project.controller.PrescribeController">
+   <children>
+      <Label layoutX="36.0" layoutY="23.0" text="医生开药界面">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="69.0" text="药品列表">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView layoutX="36.0" layoutY="106.0" prefHeight="237.0" prefWidth="835.0" fx:id="drugTable">
+        <columns>
+          <TableColumn prefWidth="75.0" text="编号" fx:id="drugidCol" />
+          <TableColumn prefWidth="75.0" text="药品名称" fx:id="drugnameCol" />
+           <TableColumn prefWidth="75.0" text="单位" fx:id="drugunitCol"/>
+           <TableColumn prefWidth="75.0" text="类别" fx:id="drugtypeCol" />
+           <TableColumn prefWidth="75.0" text="售价" fx:id="priceCol" />
+           <TableColumn prefWidth="75.0" text="供应商" fx:id="supportCol" />
+           <TableColumn prefWidth="75.0" text="库存" fx:id="stockCol" />
+        </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="356.0" text="开药列表">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView layoutX="36.0" layoutY="392.0" prefHeight="200.0" prefWidth="474.0" fx:id="drugList" />
+      <Button layoutX="727.0" layoutY="392.0" mnemonicParsing="false" text="选择药品" onAction="#selectDrug"/>
+      <Button layoutX="727.0" layoutY="459.0" mnemonicParsing="false" text="确定开药" onAction="#prescribe"/>
+      <Button layoutX="727.0" layoutY="527.0" mnemonicParsing="false" text="确认缴费" onAction="#pay"/>
+   </children>
+</AnchorPane>

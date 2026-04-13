@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane prefHeight="739.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.web138_project.controller.MedicineTypeController">
+   <children>
+      <ImageView fx:id="bgImg">
+      </ImageView>
+      <Label layoutX="31.0" layoutY="14.0" text="商品类别">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Line endX="762.0" layoutX="132.0" layoutY="60.0" startX="-107.33334350585938" />
+      <Label layoutX="38.0" layoutY="73.0" text="药品类别" />
+      <Label layoutX="38.0" layoutY="107.0" text="编号" />
+      <TextField fx:id="cidRef" layoutX="86.0" layoutY="103.0" />
+      <Label layoutX="38.0" layoutY="145.0" text="介绍" />
+      <TextArea fx:id="cdescRef" layoutX="86.0" layoutY="145.0" prefHeight="37.0" prefWidth="423.0" />
+      <Label layoutX="280.0" layoutY="107.0" text="类别名" />
+      <TextField fx:id="cnameRef" layoutX="338.0" layoutY="103.0" />
+      <Button layoutX="812.0" layoutY="103.0" mnemonicParsing="false" onAction="#medicineTypeAddHandel" prefHeight="23.0" prefWidth="61.0" text="添加" />
+      <Button layoutX="812.0" layoutY="149.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="61.0" text="删除" />
+      <TableView fx:id="medicineTypeTab" layoutX="44.0" layoutY="195.0" prefHeight="155.0" prefWidth="854.0">
+        <columns>
+          <TableColumn fx:id="cidCol" prefWidth="75.0" text="编号" />
+          <TableColumn fx:id="cnameCol" prefWidth="75.0" text="类别名" />
+           <TableColumn fx:id="cdescpCol" prefWidth="100.0" text="类别介绍" />
+           <TableColumn fx:id="lastdateCol" prefWidth="100.0" text="过期时间" />
+        </columns>
+      </TableView>
+      <Label layoutX="38.0" layoutY="418.0" text="编号" />
+      <TextField fx:id="suidRef" layoutX="98.0" layoutY="414.0" />
+      <Label layoutX="38.0" layoutY="468.0" text="邮箱" />
+      <TextField fx:id="suemailRef" layoutX="98.0" layoutY="464.0" />
+      <Label layoutX="314.0" layoutY="418.0" text="供应商" />
+      <TextField fx:id="sunameRef" layoutX="369.0" layoutY="414.0" />
+      <Label layoutX="314.0" layoutY="468.0" text="地址" />
+      <TextField fx:id="suaddressRef" layoutX="369.0" layoutY="464.0" />
+      <Label layoutX="589.0" layoutY="418.0" text="联系方式" />
+      <TextField fx:id="sutelRef" layoutX="660.0" layoutY="414.0" />
+      <Label layoutX="38.0" layoutY="521.0" text="详情" />
+      <TextArea fx:id="sudescpRef" layoutX="94.0" layoutY="519.0" prefHeight="28.0" prefWidth="423.0" />
+      <Button layoutX="628.0" layoutY="525.0" mnemonicParsing="false" onAction="#medaddSupHandel" text="添加" />
+      <Button layoutX="727.0" layoutY="525.0" mnemonicParsing="false" text="删除" />
+      <TableView fx:id="MedicineSupTab" layoutX="31.0" layoutY="574.0" prefHeight="142.0" prefWidth="854.0">
+        <columns>
+          <TableColumn fx:id="suidCol" prefWidth="75.0" text="编号" />
+          <TableColumn fx:id="supnameCol" prefWidth="75.0" text="供应商" />
+            <TableColumn fx:id="telCol" prefWidth="75.0" text="电话" />
+            <TableColumn fx:id="emailCol" prefWidth="75.0" text="邮箱" />
+            <TableColumn fx:id="addressCol" prefWidth="75.0" text="地址" />
+            <TableColumn fx:id="supdescCol" prefWidth="75.0" text="信誉" />
+        </columns>
+      </TableView>
+      <Line endX="817.1666259765625" layoutX="101.0" layoutY="390.0" startX="-77.5" />
+      <Label layoutX="39.0" layoutY="362.0" text="药品供应商" />
+      <Label layoutX="530.0" layoutY="107.0" text="过期时间" />
+      <DatePicker layoutX="596.0" layoutY="103.0" fx:id="lastdateRef"/>
+   </children>
+</AnchorPane>

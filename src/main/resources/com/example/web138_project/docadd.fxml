@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="790.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.web138_project.controller.DoctorAddController">
+   <children>
+      <ImageView fx:id="bgImg">
+      </ImageView>
+      <Label layoutX="26.0" layoutY="14.0" prefHeight="34.0" prefWidth="159.0" text="添加医生信息">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button layoutX="921.0" layoutY="722.0" mnemonicParsing="false" onAction="#backlistDocHandel" prefHeight="23.0" prefWidth="88.0" text="返回医生列表" />
+      <Label layoutX="51.0" layoutY="57.0" text="部门信息" textFill="#f20808" />
+      <Label layoutX="57.0" layoutY="91.0" text="部门名" />
+      <Label layoutX="51.0" layoutY="130.0" text="部门介绍" />
+      <TextField fx:id="deptNameRef" layoutX="114.0" layoutY="88.0" />
+      <TextArea fx:id="deptDescRef" layoutX="115.0" layoutY="126.0" prefHeight="64.0" prefWidth="159.0" />
+      <Button layoutX="325.0" layoutY="88.0" mnemonicParsing="false" onAction="#addDeptHandel" text="添加部门" />
+      <Button layoutX="325.0" layoutY="126.0" mnemonicParsing="false" onAction="#delDeptHandel" text="删除部门" />
+      <TableView fx:id="deptTab" layoutX="448.0" layoutY="86.0" prefHeight="103.0" prefWidth="542.0">
+        <columns>
+           <TableColumn fx:id="departidCol" prefWidth="75.0" text="部门编号" />
+          <TableColumn fx:id="departnameCol" prefWidth="75.0" text="部门名" />
+          <TableColumn fx:id="departdescpCol" prefWidth="75.0" text="部门介绍" />
+        </columns>
+      </TableView>
+      <Line endX="904.0" layoutX="121.0" layoutY="207.0" startX="-100.0" />
+      <Label layoutX="51.0" layoutY="222.0" text="学历信息" textFill="#dd0c0c" />
+      <Label layoutX="60.0" layoutY="251.0" text="学历" />
+      <Label layoutX="48.0" layoutY="289.0" text="学历介绍" />
+      <TextField fx:id="eduNameRef" layoutX="114.0" layoutY="247.0" />
+      <TextArea fx:id="eduDescRef" layoutX="114.0" layoutY="289.0" prefHeight="64.0" prefWidth="161.0" />
+      <Button layoutX="330.0" layoutY="247.0" mnemonicParsing="false" onAction="#addEducationHandel" text="添加学历" />
+      <Button layoutX="330.0" layoutY="285.0" mnemonicParsing="false" onAction="#delEducationHandel" text="删除学历" />
+      <TableView fx:id="eduTab" layoutX="448.0" layoutY="247.0" prefHeight="103.0" prefWidth="542.0">
+        <columns>
+          <TableColumn fx:id="eidCol" prefWidth="75.0" text="学历编号" />
+          <TableColumn fx:id="enameCol" prefWidth="75.0" text="学历名" />
+           <TableColumn fx:id="edescpCol" prefWidth="75.0" text="学历介绍" />
+        </columns>
+      </TableView>
+      <Line endX="902.0" layoutX="127.0" layoutY="371.0" startX="-100.0" />
+      <Label layoutX="60.0" layoutY="388.0" text="职称信息" textFill="#ed0f0f" />
+      <Label layoutX="60.0" layoutY="426.0" text="职称名" />
+      <Label layoutX="60.0" layoutY="460.0" text="职称介绍" />
+      <TextField fx:id="jobNameRef" layoutX="114.0" layoutY="422.0" />
+      <TextArea fx:id="jobDescRef" layoutX="114.0" layoutY="468.0" prefHeight="64.0" prefWidth="161.0" />
+      <Button layoutX="330.0" layoutY="422.0" mnemonicParsing="false" onAction="#addJobHandel" text="添加职称" />
+      <Button layoutX="330.0" layoutY="457.0" mnemonicParsing="false" onAction="#delJobHandel" text="删除职称" />
+      <TableView fx:id="jobTab" layoutX="442.0" layoutY="422.0" prefHeight="103.0" prefWidth="549.0">
+        <columns>
+          <TableColumn fx:id="jobidCol" prefWidth="75.0" text="职称编号" />
+          <TableColumn fx:id="jobnameCol" prefWidth="75.0" text="职称名" />
+           <TableColumn fx:id="jobdescpCol" prefWidth="75.0" text="职称介绍" />
+        </columns>
+      </TableView>
+      <Line endX="899.0" layoutX="128.0" layoutY="561.0" startX="-107.66665649414062" />
+      <Label layoutX="57.0" layoutY="583.0" text="添加医生信息" textFill="#e40d0d" />
+      <Label layoutX="57.0" layoutY="633.0" text="登录名" />
+      <Label layoutX="57.0" layoutY="677.0" text="出生日期" />
+      <Label layoutX="57.0" layoutY="726.0" text="职称" />
+      <Label layoutX="342.0" layoutY="633.0" text="姓名" />
+      <Label layoutX="342.0" layoutY="677.0" text="部门" />
+      <Label layoutX="342.0" layoutY="726.0" text="头像" />
+      <Label layoutX="580.0" layoutY="633.0" text="性别" />
+      <Label layoutX="580.0" layoutY="677.0" text="学历" />
+      <TextField fx:id="loginnameRef" layoutX="105.0" layoutY="629.0" />
+      <DatePicker fx:id="boirthdayRef" layoutX="105.0" layoutY="673.0" prefHeight="23.0" prefWidth="161.0" />
+      <ComboBox fx:id="jobCom" layoutX="105.0" layoutY="722.0" prefHeight="23.0" prefWidth="161.0" />
+      <TextField fx:id="realnameRef" layoutX="385.0" layoutY="629.0" />
+      <ComboBox fx:id="deptCom" layoutX="385.0" layoutY="673.0" prefHeight="23.0" prefWidth="159.0" />
+      <ComboBox fx:id="iconCom" layoutX="385.0" layoutY="722.0" onAction="#chooseIcon" prefHeight="23.0" prefWidth="161.0" />
+      <RadioButton fx:id="boyRef" layoutX="639.0" layoutY="633.0" mnemonicParsing="false" text="男" />
+      <RadioButton fx:id="girlRef" layoutX="732.0" layoutY="633.0" mnemonicParsing="false" text="女" />
+      <ComboBox fx:id="eduCom" layoutX="642.0" layoutY="673.0" prefHeight="23.0" prefWidth="171.0" />
+      <Button layoutX="785.0" layoutY="722.0" mnemonicParsing="false" onAction="#addDocHandel" prefHeight="23.0" prefWidth="93.0" text="添加医生信息" />
+      <ImageView fx:id="iconImg" fitHeight="52.0" fitWidth="57.0" layoutX="568.0" layoutY="709.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="921.0" layoutY="36.0" mnemonicParsing="false" onAction="#refresh" text="页面刷新" />
+   </children>
+</AnchorPane>

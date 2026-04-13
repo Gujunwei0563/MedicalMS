@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.web138_project.controller.MainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="用户管理" fx:id="userMenu">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addDocHandel" text="添加医生" />
+                <MenuItem mnemonicParsing="false" onAction="#listDocHandel" text="医生管理列表" />
+                <MenuItem mnemonicParsing="false" onAction="#addAdminHandel" text="管理员信息" />
+
+
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="病人管理">
+            <items>
+                <MenuItem mnemonicParsing="false" text="挂号" onAction="#registrationHandel"/>
+
+                <MenuItem mnemonicParsing="false" onAction="#listPatientHandel" text="病人管理列表" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="药物管理" fx:id="drupMenu">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#typeMedicineHandel" text="药品类别" />
+                <MenuItem mnemonicParsing="false" onAction="#addMedicineHandel" text="添加药品" />
+                <MenuItem mnemonicParsing="false" text="药物设置" onAction="#medicineManagerHandel"/>
+
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="数据统计">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="医生数据统计" fx:id="dataMenu"/>
+                    <MenuItem mnemonicParsing="false" text="医生岗位管理" />
+                    <MenuItem mnemonicParsing="false" text="药品统计" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="就诊信息">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="就诊" onAction="#seeDocHandel"/>
+                    <MenuItem mnemonicParsing="false" text="开药" onAction="#prescribeHandel"/>
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ai小助理">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="AI助理" onAction="#aiHandel"/>
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="系统设置">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="修改密码" />
+                    <MenuItem mnemonicParsing="false" text="修改个人信息" />
+                    <MenuItem mnemonicParsing="false" onAction="#cancelUser" text="注销用户" />
+                    <MenuItem mnemonicParsing="false" onAction="#logout" text="退出系统" />
+                </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="mainFrame" prefHeight="596.0" prefWidth="801.0">
+         <children>
+            <Label layoutX="78.0" layoutY="36.0" text="欢迎光临万和医疗管理系统">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="134.0" text="角色">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="197.0" text="姓名">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="275.0" text="头像">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="134.0" text="Label" fx:id="roleLab">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="197.0" text="Label" fx:id="nameLab">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="107.0" fitWidth="119.0" layoutX="160.0"
+                       layoutY="259.0" pickOnBounds="true" preserveRatio="true" fx:id="iconimg"/>
+         </children></AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="669.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.web138_project.controller.MedManagerController">
+   <children>
+      <ImageView fx:id="bgImg">
+      </ImageView>
+      <Label layoutX="37.0" layoutY="26.0" text="药品管理一览表" textFill="#1778ce">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="722.3333740234375" layoutX="115.0" layoutY="64.0" startX="-100.0" />
+      <Label layoutX="44.0" layoutY="78.0" text="查询信息" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b6d4ef" height="93.0" layoutX="25.0" layoutY="101.0" stroke="BLACK" strokeType="INSIDE" width="809.0" />
+      <Label layoutX="37.0" layoutY="113.0" text="请选择查询方式" />
+      <ComboBox fx:id="queryWayCom" layoutX="146.0" layoutY="109.0" onAction="#queryWayHandel" prefHeight="23.0" prefWidth="141.0" />
+      <Button layoutX="738.0" layoutY="148.0" mnemonicParsing="false" onAction="#queryHandel" prefHeight="28.0" prefWidth="48.0" text="查询">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Line endX="722.3333740234375" layoutX="115.0" layoutY="211.0" startX="-100.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a8c9e9" height="47.0" layoutX="28.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="802.0" />
+      <Button layoutX="48.0" layoutY="239.0" mnemonicParsing="false" onAction="#delHandel" text="删除药品记录" />
+      <Button layoutX="199.0" layoutY="239.0" mnemonicParsing="false" onAction="#updateHandel" text="更新药品记录" />
+      <Label layoutX="49.0" layoutY="286.0" text="药品信息表" />
+      <TableView fx:id="medTab" layoutX="29.0" layoutY="312.0" prefHeight="243.0" prefWidth="802.0">
+        <columns>
+          <TableColumn fx:id="drugidCol" prefWidth="75.0" text="编号" />
+          <TableColumn fx:id="drugnameCol" prefWidth="75.0" text="药品名" />
+            <TableColumn fx:id="purchasepriceCol" prefWidth="75.0" text="价格" />
+            <TableColumn fx:id="stockCol" prefWidth="75.0" text="库存" />
+            <TableColumn fx:id="drugunitCol" prefWidth="75.0" text="单位" />
+            <TableColumn fx:id="productdateCol" prefWidth="75.0" text="生产日期" />
+            <TableColumn fx:id="usedateCol" prefWidth="75.0" text="有效年数" />
+            <TableColumn fx:id="cnameCol" prefWidth="75.0" text="类别" />
+            <TableColumn fx:id="supnameCol" prefWidth="75.0" text="供应商" />
+        </columns>
+      </TableView>
+      <Button layoutX="80.0" layoutY="585.0" mnemonicParsing="false" onAction="#firstPage" text="首页" />
+      <Button layoutX="243.0" layoutY="585.0" mnemonicParsing="false" onAction="#prePage" text="上一页" />
+      <Button layoutX="578.0" layoutY="585.0" mnemonicParsing="false" onAction="#nextPage" text="下一页" />
+      <Button layoutX="746.0" layoutY="585.0" mnemonicParsing="false" onAction="#lastPage" text="尾页" />
+      <Label fx:id="pageLabel" layoutX="394.0" layoutY="626.0" text="显示当前页数" />
+      <ComboBox fx:id="chooseCom" layoutX="146.0" layoutY="151.0" prefHeight="23.0" prefWidth="141.0" />
+      <Button layoutX="367.0" layoutY="239.0" mnemonicParsing="false" onAction="#intoAddDrug" prefHeight="23.0" prefWidth="84.0" text="添加药品" />
+      <Label layoutX="394.0" layoutY="113.0" text="查询汉字" />
+      <TextField fx:id="queryText" layoutX="466.0" layoutY="109.0" prefHeight="23.0" prefWidth="141.0" />
+   </children>
+</AnchorPane>
