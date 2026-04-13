@@ -28,9 +28,9 @@ Guava、Javassist、Reflections - 工具库
  
 📁 项目架构
 **分层架构设计
-├── controller/          # 控制层 - FXML页面控制器
-├── service/            # 业务逻辑层
-│   └── impl/          # 服务实现类
+├── controller/          # 控制层 - FXML页面控制器 
+├── service/            # 业务逻辑层 
+│   └── impl/          # 服务实现类 
 ├── dao/                # 数据访问层
 │   ├── impl/          # DAO实现类
 │   └── mapper/        # 数据映射器
